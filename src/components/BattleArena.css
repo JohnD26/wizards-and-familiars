@@ -1,0 +1,155 @@
+/* BattleArena.css */
+/* BattleArena.css */
+.battle-arena {
+  width: 90%;            /* expand container width */
+  max-width: 1400px;
+  height: 100vh;         /* fill full viewport height */
+  margin: 0 auto;        /* center horizontally */
+  padding: 20px;
+  box-sizing: border-box;
+  background: #2a2a2a;    /* darker background for contrast */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.battle-layout {
+  display: flex;
+  flex: 1;               /* fill remaining vertical space */
+  gap: 20px;
+}
+
+.battle-field,
+.battle-log {
+  overflow-y: auto;
+}
+
+.battle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.battle-header h2 {
+  color: #fff;
+}
+
+.battle-message p {
+  color: #fff;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.battle-layout {
+  display: flex;
+  gap: 20px;
+}
+
+.battle-field {
+  flex: 2;
+  background: #222;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.familiar-status {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.player-side,
+.opponent-side {
+  text-align: center;
+  color: #fff;
+}
+
+.familiar-sprite {
+  width: 96px;
+  height: 96px;
+  margin: 10px auto;
+}
+
+.vs-indicator {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  color: #ffe66d;
+}
+
+.attack-options {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.attack-options button {
+  min-width: 140px;
+  text-align: left;
+}
+
+.waiting {
+  text-align: center;
+  font-style: italic;
+  color: #fff;
+}
+
+.battle-ended {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.battle-log {
+  flex: 1;
+}
+
+.log-content {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+/* Life bar styles */
+.life-bar-container {
+  width: 100px;
+  height: 10px;
+  background-color: #444;
+  border: 1px solid #666;
+  border-radius: 4px;
+  margin: 0.5em auto;
+}
+
+.life-bar {
+  height: 100%;
+  transition: width 0.3s;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .battle-arena {
+    padding: 10px;
+  }
+  .battle-layout {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .battle-field, .battle-log {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .battle-field {
+    flex: 3;
+  }
+  .battle-log {
+    flex: 2;
+  }
+}
