@@ -5,7 +5,7 @@ export function speakLocal(text) {
   const say = () => {
     const voices = speechSynthesis.getVoices()
 
-    // Prefer “cool-sounding” voices if present
+    // Nice voices
     const preferred = voices.find(v =>
       /UK|en-GB|Irish|Australian|Brian|Mark|Emma/i.test(v.name)
     ) || voices.find(v => /en/i.test(v.lang))       
