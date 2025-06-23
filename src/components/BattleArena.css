@@ -71,20 +71,17 @@
 /* vs text */
 .vs-indicator{ font-size: clamp(1.25rem, 3vw + .5rem, 2rem); color: var(--primary); }
 
-/* attack buttons  */
-.attack-options{
+
+.attack-options {
   margin-block-start: var(--gap-md);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: var(--gap-sm);
+  max-inline-size: 320px;
+  width: 100%;
+  margin-inline-start: 1rem;   /* shift slightly right */
 }
-.attack-options button{
-  padding: .75em .5em;
-  font-size: .95rem;
-  line-height: 1.2;
-  min-block-size: 44px;      /* meets mobile target size */
-  white-space: nowrap;
-}
+
 .attack-options button:disabled{ opacity:.55; cursor:not-allowed; }
 
 /*  log (right) */
